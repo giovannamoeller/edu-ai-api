@@ -3,6 +3,8 @@ from typing import List, Optional
 from datetime import datetime
 
 class CompetencyDetails(BaseModel):
+    text: str
+    subject: str
     score: int
     justification: str
 

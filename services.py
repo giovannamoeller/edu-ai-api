@@ -40,7 +40,7 @@ class EssayAnalysisService:
 
       The 'feedback' section should contain for each competency (1-5):
       - score: integer matching the score above
-      - justification: string explaining the score and improvement suggestions. be very specific and provide examples on how to improve. for example, if you mention 'However, the argument could be more complex and nuanced.', you should provide a specific example of how the argument could be more complex and nuanced.
+      - justification: string explaining the score and improvement suggestions. be very specific and provide examples on how to improve. for example, if you mention 'However, the argument could be more complex and nuanced.'
       """
       
       # Create the complete prompt
@@ -75,6 +75,8 @@ class EssayAnalysisService:
           
           # Create the response
           return EssayResponse(
+              text=cleaned_text,
+              subject=subject,
               scores=scores,
               feedback=feedback,
               created_at=datetime.now()
