@@ -3,8 +3,6 @@ from typing import List, Optional
 from datetime import datetime
 
 class CompetencyDetails(BaseModel):
-    text: str
-    subject: str
     score: int
     justification: str
 
@@ -27,6 +25,7 @@ class EssayRequest(BaseModel):
     subject: str
 
 class EssayResponse(BaseModel):
+    text: str
+    subject: str
     scores: EssayScores
     feedback: CompetencyFeedback
-    created_at: datetime

@@ -22,6 +22,7 @@ essay_service = EssayAnalysisService(
 
 @app.post("/analyze-essay", response_model=EssayResponse)
 async def analyze_essay(request: EssayRequest):
+    print(request)
     try:
         response = await essay_service.analyze_essay(
             text=request.text,

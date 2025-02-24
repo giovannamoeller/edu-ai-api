@@ -78,8 +78,7 @@ class EssayAnalysisService:
               text=cleaned_text,
               subject=subject,
               scores=scores,
-              feedback=feedback,
-              created_at=datetime.now()
+              feedback=feedback
           )
           
       except Exception as e:
